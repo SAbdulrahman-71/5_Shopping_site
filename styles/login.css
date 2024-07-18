@@ -1,0 +1,47 @@
+
+:root {
+    --whitish: #F9F7F7;
+    --bluish: #DBE2EF;
+    --blued: #3F72AF;
+    --dark_blued: #112D4E;
+}
+
+body {
+    background-color: var(--bluish);
+}
+
+.card {
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--dark_blued);
+    color: #fff;
+    padding: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: var(--dark_blued);
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+.error-message{
+     
+    text-align: center;
+    text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.5);
+    color: #ff0000;
+    border-color: #0056b3;
+}

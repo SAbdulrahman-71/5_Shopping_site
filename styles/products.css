@@ -1,0 +1,12 @@
+:root {
+    --whitish: #F9F7F7;
+    --bluish: #DBE2EF;
+    --blued: #3F72AF;
+    --dark_blued: #112D4E;
+}
+
+body {
+    background-color: var(--bluish);
+    padding-top: 20px;
+   
+}
