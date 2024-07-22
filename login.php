@@ -1,5 +1,5 @@
     <?php session_start();
-    require('users.php');
+    require('Data/users.php');
 
     ?>
     <!DOCTYPE html>
@@ -76,36 +76,7 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <img src="images/products_items/watches/1.png"> -->
-        <!-- <img src="images/products_items/watches/Digital_Watch.webp"> -->
-
-
-
-
     </body>
 
     </html>

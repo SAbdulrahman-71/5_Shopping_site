@@ -6,7 +6,16 @@
 }
 
 body {
-    background-color: var(--bluish);
+    background-color: var(--whitish );
     padding-top: 20px;
+    padding: 5%;
+   
+}
+
+.card-body{
+
+    background-color: var(--dark_blued);
+    color: #F9F7F7;
+    border-radius: 2%;
    
 }

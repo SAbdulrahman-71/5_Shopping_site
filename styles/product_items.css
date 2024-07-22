@@ -7,50 +7,84 @@
 
 
 body {
-    background-color: var(--bluish);
+    background-color: var(--whitish);
     padding-top: 20px;
    
 }
 
+
 .product-card {
-    
-    transition: transform 0.3s ease-in-out;
     /* Smooth transition on hover */
+    transition: transform 0.3s ease-in-out;
 }
 
 .product-card:hover {
     
     transform: translateY(-5px);
-    /* Move card up on hover */
 }
+
 
 .card-body {
     padding: 1.25rem;
-    /* Padding inside card body */
 }
 
 .card-title {
     font-size: 1.25rem;
-    /* Larger font size for title */
     margin-bottom: 0.75rem;
-    /* Bottom margin for title */
+    
 }
 
 .card-text {
-    color: #6c757d;
-    /* Text color for price */
+    /* for the price color */
+    color: #006bc9;
+  
 }
 
 .btn-primary {
     background-color: #007bff;
-    /* Blue primary button */
     border-color: #007bff;
-    /* Blue border for button */
+  
 }
 
 .btn-primary:hover {
     background-color: #0069d9;
-    /* Darker blue on hover */
+    
     border-color: #0062cc;
-    /* Darker border on hover */
+    
+}
+
+
+.view-cart-btn {
+    position: fixed;
+    
+    top: 90%;
+    right: 20px;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+.product-card {
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card .card-body .mt-auto {
+    margin-top: auto;
 }
