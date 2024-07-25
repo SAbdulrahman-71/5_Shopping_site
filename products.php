@@ -1,12 +1,14 @@
 <?php
-require('functions.php');
-html_connect(); // only other pages not on login page
-include 'Data/products_data.php';
+session_start();
 
-if (isset($_SESSION['name'])) {
-} else {
-    echo '<button type="submit" name="ok"><a href="login.php"</a> unauthorized<br></button></form>';
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: login.php');
+    exit;
 }
+
+require('functions.php');
+html_connect();
+include 'Data/products_data.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,49 +23,60 @@ if (isset($_SESSION['name'])) {
 </head>
 
 <body>
-    <h1 class="container text-center">
-        Welcome to the website Dear <?php echo  $_SESSION['name'] ?> </h1>
-    <hr>
+    <nav class="nav_container">
+        <ul class="nav flex-column text-center">
+            <li class="nav-item ">
+                <a class="nav-link" aria-current="page" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php">Log in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="products.php">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="view_cart.php">View Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout.php">Log out</a>
+            </li>
+        </ul>
+    </nav>
 
-    <h3 class="text-left">
-        Kindly have a look no this display of all products we have.</h3>
-    <h3 class="text-left">
-        then you may choose the product that you want</h3>
-    <div class="container-flex px-5 py-5">
-        <div class="row">
-
-            <?php
-            foreach ($products as $product) {
-                echo '<div class="col-lg-6 p-1">';
-                echo '<div class="card product-card">';
-                echo '<div class="card-body">';
-                // Change the link to include an anchor with product ID
-                echo '<a style="color: #F9F7F7;" href="product_view.php?product=' . $product['id'] . '">' . $product['name'] . ' - ' . $product['description'] . '</a><br>';
-                echo '<div class="card" style="padding: 10px; margin-top: 10px; background-color: white; border: 1px solid #ccc; border-radius: 5px;">';
-                echo '<pre style="margin-bottom: 0;">';
-                echo '<strong>Product Details:</strong><br>';
-                echo 'ID: ' . $product['id'] . '<br>';
-                echo 'Name: ' . $product['name'] . '<br>';
-                echo 'Description: ' . $product['description'] . '<br>';
-
-                foreach ($product['items'] as $items) {
-                    echo '<br>Item Name: ' . $items['name'] . '<br>&ensp;';
-                    echo ' Item Price: $' . $items['price'] . '<br>';
-                }
-
-                echo '</pre>';
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-            }
-            ?>
-
+    <div class="container- px-5" style="margin: 5%;">
+        <h1 class="welcomeing text-center">Welcome to the website Dear <?php echo $_SESSION['name']; ?></h1>
+        <hr>
+        <h3 class="text-left welcomeing">Kindly have a look at this display of all products we have.</h3>
+        <h3 class="text-left welcomeing">Then you may choose the product that you want</h3>
+        <div class="px-5 py-5">
+            <div class="row">
+                <?php foreach ($products as $product) : ?>
+                    <div class="col-lg-6 p-1" style="left:-8%;">
+                        <div class="products_container">
+                            <div class="card-body">
+                                <?php echo '<a href="product_view.php?product=' . $product['id'] . '">' . $product['name'] . ' - ' . $product['description'] . '</a>'; ?>
+                                <div class="card">
+                                    <strong>Product Details </strong><br>
+                                    <div style="margin-bottom: 0;">
+                                        <?php
+                                        echo 'ID: ' . $product['id'] . '<br>';
+                                        echo 'Name: ' . $product['name'] . '<br>';
+                                        echo 'Description: ' . $product['description'] . '<br>';
+                                        foreach ($product['items'] as $items) {
+                                            echo '<br>Item Name: ' . $items['name'] . '<br>&ensp;';
+                                            echo ' Item Price: $' . $items['price'] . '<br>';
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

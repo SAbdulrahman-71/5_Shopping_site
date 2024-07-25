@@ -1,6 +1,21 @@
 <?php
+// Database connection settings
+$db_host = 'localhost';
+$db_name = 'production';
+$db_user = 'root';
+$db_pass = '';
 
-session_start();
-if (!isset($_SESSION['name'])) {
-    header('Location: login.php?error=Please login');
+// Create connection to the database
+$connect = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+
+// Check if the connection is successful
+if (!$connect) {
+    echo 'Connection failed...';
+    exit;
 }
+
+// 
+// session_start();
+// if (!isset($_SESSION['name'])) {
+//     header('Location: login.php?error=Please login');
+// }

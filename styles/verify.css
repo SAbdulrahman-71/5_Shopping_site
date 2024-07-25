@@ -1,44 +1,33 @@
+
 :root {
     --whitish: #F9F7F7;
     --bluish: #DBE2EF;
     --blued: #3F72AF;
     --dark_blued: #112D4E;
-    
+
+
 }
 
 body {
+    /* background-color: rgba(2, 15, 7, 0.91); */
     background-image: url('../images/web_img/pine.jpg');
-    height: 120vh;
-    
-    /* display: flex; */
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-.home_container {
-   
-    margin: 2% ; 
-    padding: 20px;
-    max-width: 80%; 
-    color: black;
-    background-color: rgba(255, 255, 255, 0.411);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
 
 
 
 .nav_container {
     margin: 3%;
-    right: 0;
+    right: -2%;
     top: 30%;
     height: auto;
-    width: 15%;
+    width: 12%;
     background-color: rgba(0, 0, 0, 0.616);
     color: var(--whitish);
     position: fixed;
@@ -57,7 +46,7 @@ body {
 }
 
 .nav_container a:hover {
-    background-color:  #1c391b8d;
+    background-color:  #0f3d02;;
     color: var(--bluish); 
     border-radius: 4px; 
 }
@@ -70,22 +59,47 @@ body {
 
 
 
-.Display_container{
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
     
-    margin: 2% ; /* Center the container and provide space around */
-    padding: 20px;
-    max-width: 80%; /* Limit width for larger screens */
-    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+    margin-top: 50px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.759);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
-
+    justify-content: center;
 }
 
 
-.pic_card{
 
 
-
+.btn-primary {
+    background-color:  #5b3111d6;
+    border-color: #000000;
 }
+
+.btn-primary:hover {
+    background-color: #0f3d02;
+    border-color: #000000;
+}
+

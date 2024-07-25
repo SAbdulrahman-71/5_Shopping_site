@@ -4,37 +4,87 @@
     --bluish: #DBE2EF;
     --blued: #3F72AF;
     --dark_blued: #112D4E;
+
+
 }
 
+
+.nav_container {
+    margin: 3%;
+    right: 0;
+    top: 30%;
+    height: auto;
+    width: 15%;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: var(--whitish);
+    position: fixed;
+    z-index: 1000;
+    border-radius: 8px; 
+    padding: 1em; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.nav_container a {
+    color: var(--whitish);
+    display: block; 
+    padding: 0.5em 0; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.nav_container a:hover {
+    background-color:  #0f3d02;;
+    color: var(--bluish); 
+    border-radius: 4px; 
+}
+
+.nav_container .nav-link.active {
+    font-weight: bold;
+    background-color: #0123008d;
+    border-radius: 4px; 
+}
+
+
 body {
-    background-color: var(--whitish);
+    /* background-color: rgba(2, 15, 7, 0.91); */
+    background-image: url('../images/web_img/pine.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
     margin-top: 50px;
-    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     background-color: rgba(0, 0, 0, 0.759);
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 .card-header {
-    background-color: var(--dark_blued);
+    background-color:  #5b3111cd;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
     color: #fff;
     padding: 10px;
 }
 
 .card-body {
     padding: 20px;
+    color: #fff;
 }
 
 .btn-primary {
-    background-color: var(--dark_blued);
-    border-color: #007bff;
+    background-color:  #5b3111d6;
+    border-color: #000000;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #0f3d02;
+    border-color: #000000;
 }
 
 
@@ -43,5 +93,5 @@ body {
     text-align: center;
     text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.5);
     color: #ff0000;
-    border-color: #0056b3;
+    border-color: #000000;
 }

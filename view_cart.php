@@ -3,6 +3,18 @@ require('functions.php');
 html_connect(); // only other pages not on login page
 include 'Data/new_data.php';
 
+// if (isset($_SESSION['name'])) {
+// } else {
+//     header('Location: login.php');
+//     echo '<button type="submit" name="ok"><a href="login.php"</a> unauthorized<br></button></form>';
+// }
+// session_start();
+
+
+
+
+
+
 function getProductById($itemId, $items)
 {
     foreach ($items as $item) {

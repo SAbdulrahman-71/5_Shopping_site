@@ -6,16 +6,100 @@
 }
 
 body {
-    background-color: var(--whitish );
-    padding-top: 20px;
-    padding: 5%;
-   
+    
+   background-image: url('../images/web_img/pine.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+.nav_container {
+    margin: 3%;
+    right: -2%;
+    top: 30%;
+    height: auto;
+    width: 12%;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: var(--whitish);
+    position: fixed;
+    z-index: 1000;
+    border-radius: 8px; 
+    padding: 1em; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.nav_container a {
+    color: var(--whitish);
+    display: block; 
+    padding: 0.5em 0; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.nav_container a:hover {
+    background-color:  #0f3d02;;
+    color: var(--bluish); 
+    border-radius: 4px; 
+}
+
+.nav_container .nav-link.active {
+    font-weight: bold;
+    background-color: #0123008d;
+    border-radius: 4px; 
+}
+
+.welcomeing{
+
+
+    margin: 2% ; 
+    padding: 20px;
+    max-width: 80%; 
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.411);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.products_container{
+    color: #ffffff;
+    margin-top: 50px;
+    border-radius: 8px;
+    background-color:#030303bc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.products_container a{
+    
+    color: #DBE2EF;
+    text-shadow: 0 0px 0px rgb(0, 0, 0);
+}
+
+.card{
+   
+
+    margin-top: 50px;
+    border-radius: 8px;
+    background-color: #dbe2efb3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
 
 .card-body{
 
-    background-color: var(--dark_blued);
-    color: #F9F7F7;
+    /* background-color: var(--dark_blued); */
+    color: #000000;
     border-radius: 2%;
+    text-shadow: 0 0px 0px rgb(0, 0, 0); 
+
+    
    
 }

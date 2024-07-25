@@ -1,6 +1,12 @@
 <?php
 session_start();
 include 'Data/products_data.php';
+if (isset($_SESSION['name'])) {
+} else {
+    header('Location: login.php');
+    echo '<button type="submit" name="ok"><a href="login.php"</a> unauthorized<br></button></form>';
+}
+session_start();
 
 function getProductById($itemId, $products)
 {
